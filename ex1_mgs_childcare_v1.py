@@ -16,18 +16,22 @@ def pick_up():
     name = input("Enter the name of child to check-out: ")
     if name in roll:
         roll.remove(name)
-        print(f"{name} has been removed from the roll..")
+        print(f"{name} has been removed from the roll.")
     else:
         print(f"Error! {name} could not be found in the roll. Please check.")
 
 
 # Calculate Cost Function
 def calc_cost():
+    global HOURLY_RATE
+    # from collections import namedtuple
+    # constants = namedtuple("const", "HOURLY_RATE")
+    # consts = constants(12)
     hours = float(input("Enter the number of hours to charge: "))
     num_children = len(roll)
-    total_cost = hours * num_children
-    print(f"It costs {total_cost} for "
-          f"looking after {num_children} for {hours}.")
+    total_cost = hours * HOURLY_RATE * num_children
+    print(f"It costs ${total_cost} for "
+          f"looking after {num_children} children for {hours} hours.")
 
 
 # Print Roll Function
@@ -38,6 +42,7 @@ def print_roll():
 
 
 # Main Routine
+HOURLY_RATE = 12
 roll = []
 choice = 0
 while choice != 5:
