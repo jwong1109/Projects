@@ -6,7 +6,7 @@ Created by Joseph Wong
 
 # Drop Off Function
 def drop_off():
-    name = input("Enter the name of child to check-in: ")
+    name = input("Enter the name of child to check-in: ").title()
     roll.append(name)
     print(f"{name} has been added to the list.")
 
