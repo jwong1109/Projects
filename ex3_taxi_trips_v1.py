@@ -23,6 +23,6 @@ ave_time = total_time / total_trip
 ave_cost = total_income / total_trip
 print(f"Driver's name: {name}")
 print(f"The total time of all trips: {total_time} minutes.")
-print(f"The average time of all trips: {ave_time} minutes.")
+print(f"The average time of all trips: {ave_time:,.2f} minutes.")
 print(f"The total income for the day: ${total_income}")
-print(f"The average cost of all trips: ${ave_cost}")
+print(f"The average cost of all trips: ${ave_cost:,.2f}")
